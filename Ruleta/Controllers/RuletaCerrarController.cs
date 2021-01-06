@@ -1,4 +1,5 @@
 ﻿using Ruleta.Models.Bases;
+using Ruleta.Models.RuletaCerrar;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,11 +9,11 @@ using System.Web.Http;
 
 namespace Ruleta.Controllers
 {
-    public class RuletaAbrirController : ApiController
+    public class RuletaCerrarController : ApiController
     {
-        public HttpResponseMessage RuletaAbrirActualizar(PutRuletaAbrirParameters data)
+        public HttpResponseMessage RuletaCerrarActualizar(PutRuletaCerrarParameters data)
         {
-            CollectionResult<CRUD_RuletaAbrir_Result> service = CallService<CRUD_RuletaAbrir_Result>("RuletaAbrir/RuletaAbrirActualizar", data, delegate ()
+            CollectionResult<CRUD_RuletaCerrar_Result> service = CallService<CRUD_RuletaCerrar_Result>("RuletaCerrar/RuletaCerrarActualizar", data, delegate ()
             {
                 return db.CRUD_RuletaCerrar(data.RuletaID, data.Estado);
             });

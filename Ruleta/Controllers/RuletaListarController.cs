@@ -1,4 +1,5 @@
 ﻿using Ruleta.Models.Bases;
+using Ruleta.Models.RuletaListar;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,13 +9,13 @@ using System.Web.Http;
 
 namespace Ruleta.Controllers
 {
-    public class RuletaAbrirController : ApiController
+    public class RuletaListarController : ApiController
     {
-        public HttpResponseMessage RuletaAbrirActualizar(PutRuletaAbrirParameters data)
+        public HttpResponseMessage RuletasConsultar(GetRuletasParameters data)
         {
-            CollectionResult<CRUD_RuletaAbrir_Result> service = CallService<CRUD_RuletaAbrir_Result>("RuletaAbrir/RuletaAbrirActualizar", data, delegate ()
+            CollectionResult<CRUDS_Ruletas_Result> service = CallService<CRUDS_Ruletas_Result>("Ruletas/RuletasConsultar", data, delegate ()
             {
-                return db.CRUD_RuletaCerrar(data.RuletaID, data.Estado);
+                return db.CRUDS_Ruletas(data.RuletaID, data.Codigo);
             });
 
             if (service.result == ServiceResult.Success)

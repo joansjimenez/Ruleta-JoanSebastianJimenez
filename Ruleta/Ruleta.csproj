@@ -158,11 +158,19 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RuletaAbrirController.cs" />
     <Compile Include="Controllers\RuletaApuestaController.cs" />
+    <Compile Include="Controllers\RuletaCerrarController.cs" />
     <Compile Include="Controllers\RuletaCrearController.cs" />
+    <Compile Include="Controllers\RuletaListarController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Bases\CollectionResult.cs" />
+    <Compile Include="Models\RuletaAbrir\PutRuletaAbrirParameters.cs" />
+    <Compile Include="Models\RuletaApuesta\PostRuletaApuestaParameters.cs" />
+    <Compile Include="Models\RuletaCerrar\PutRuletaCerrarParameters.cs" />
+    <Compile Include="Models\RuletaCrear\PostRuletaParameters.cs" />
+    <Compile Include="Models\RuletaListar\GetRuletasParameters.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -218,7 +226,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
