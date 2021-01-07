@@ -13,7 +13,7 @@ namespace Ruleta.Controllers
     {
         public HttpResponseMessage RuletaApuestaInsertar(PostRuletaApuestaParameters data)
         {
-            if (data.UsuarioCreditos <= 0)
+            if (data.UsuarioCreditos <= 0 && data.Cantidad <= 10000)
             {
                 CollectionResult<CRUD_RuletaApuesta_Result> service = CallService<CRUD_RuletaApuesta_Result>("RuletaApuesta/RuletaApuestaInsertar", data, delegate ()
                 {

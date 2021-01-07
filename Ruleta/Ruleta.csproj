@@ -169,6 +169,7 @@
     <Compile Include="Models\RuletaAbrir\PutRuletaAbrirParameters.cs" />
     <Compile Include="Models\RuletaApuesta\PostRuletaApuestaParameters.cs" />
     <Compile Include="Models\RuletaCerrar\PutRuletaCerrarParameters.cs" />
+    <Compile Include="Models\RuletaCerrar\SalidaRuletaCerrarParameters.cs" />
     <Compile Include="Models\RuletaCrear\PostRuletaParameters.cs" />
     <Compile Include="Models\RuletaListar\GetRuletasParameters.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
